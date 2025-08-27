@@ -73,3 +73,54 @@
   margin: 0;
   font-weight: bold;
 }
+
+/* overlay blur */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px); /* efek blur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* box notif */
+.popup-box {
+  background: #fff;
+  padding: 25px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  animation: scaleIn 0.3s ease;
+}
+
+.popup-box h3 {
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+/* tombol close */
+.btn-close {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-close:hover {
+  background: #45a049;
+}
+
+/* animasi masuk */
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import CardProduk from "./components/CardProduk";
-import Counter from "./components/Counter";
 import "./App.css";
 
 function App() {
