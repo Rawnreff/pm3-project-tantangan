@@ -1,5 +1,5 @@
 import React from "react";
-import CardProduk from "./Components/CardProduk";
+import CardProduk from "./components/CardProduk";
 import "./App.css";
 
 function App() {
