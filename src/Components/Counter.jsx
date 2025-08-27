@@ -11,9 +11,20 @@ function Counter() {
 
   return (
     <div className="counter">
-      <button onClick={decrement} disabled={count === 0}>-</button>
+      <button 
+        className="btn-decrement" 
+        onClick={decrement} 
+        disabled={count === 0}
+      >
+        -
+      </button>
       <p>{count}</p>
-      <button onClick={increment}>+</button>
+      <button 
+        className="btn-increment" 
+        onClick={increment}
+      >
+        +
+      </button>
     </div>
   );
 }

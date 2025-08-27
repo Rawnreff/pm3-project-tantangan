@@ -5,8 +5,7 @@
   gap: 12px;
   margin: 16px 0;
 }
-
-.counter button {
+.counter .btn-increment {
   background: #4caf50;
   color: #fff;
   border: none;
@@ -18,15 +17,32 @@
   transition: background 0.2s ease;
 }
 
-.counter button:hover {
+.counter .btn-increment:hover {
   background: #45a049;
 }
 
-.counter button:disabled {
+.counter .btn-decrement {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.counter .btn-decrement:hover {
+  background: #d32f2f;
+}
+
+.counter .btn-decrement:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
 
+/* Angka counter */
 .counter p {
   margin: 0;
   font-weight: bold;
