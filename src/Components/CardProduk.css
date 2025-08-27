@@ -30,7 +30,6 @@
   margin-bottom: 15px;
 }
 
-/* --- Tombol utama beli --- */
 .card-produk .btn-beli {
   background: #ddd;
   color: #000;
@@ -46,7 +45,6 @@
   background: #45a049;
 }
 
-/* --- Tombol counter --- */
 .counter {
   display: flex;
   justify-content: center;
