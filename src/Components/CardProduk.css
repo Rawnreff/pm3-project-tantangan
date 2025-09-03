@@ -1,11 +1,13 @@
+/* CardProduk.css */
 .card-produk {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 250px;
+  width: 280px;
   text-align: center;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .card-produk:hover {
@@ -28,11 +30,12 @@
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 15px;
+  min-height: 40px;
 }
 
 .card-produk .btn-beli {
-  background: #ddd;
-  color: #000;
+  background: #007bff;
+  color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 6px;
@@ -42,7 +45,7 @@
 }
 
 .card-produk .btn-beli:hover {
-  background: #45a049;
+  background: #0056b3;
 }
 
 .counter {
@@ -51,23 +54,4 @@
   align-items: center;
   gap: 8px;
   margin: 12px 0;
-}
-
-.counter button {
-  background: #ddd;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.counter button:hover {
-  background: #bbb;
-}
-
-.counter p {
-  margin: 0;
-  font-weight: bold;
 }
