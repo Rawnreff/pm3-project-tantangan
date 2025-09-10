@@ -3,7 +3,7 @@ import './TampilkanGambar.css';
 
 const TampilkanGambar = () => {
   const [tampil, setTampil] = useState(false);
-  const imageUrl = "https://images.unsplash.com/photo-1542838132-92c103e35a16?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200";
+  const imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDG2D-NcswHqsiENuathCvkdBRZnhrNKAXZw&s";
 
   return (
     <div className="image-display-container">
