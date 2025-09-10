@@ -1,3 +1,4 @@
+// src/components/CardProduk.jsx
 import React, { useState } from 'react';
 import './CardProduk.css';
 
@@ -10,17 +11,33 @@ const CardProduk = ({ nama, harga, deskripsi, onBuy }) => {
   };
 
   return (
-    <div className="card-produk">
-      <h3 className="produk-nama">{nama}</h3>
-      <p className="produk-harga">Rp {harga}</p>
-      <p className="produk-deskripsi">{deskripsi}</p>
-      <div className="produk-interaksi">
-        <div className="counter">
-          <button onClick={decrement} disabled={count === 0}>-</button>
-          <span>{count}</span>
-          <button onClick={increment}>+</button>
+    <div className="product-card">
+      <div className="product-content">
+        <h3 className="product-name">{nama}</h3>
+        <p className="product-price">Rp {harga.toLocaleString('id-ID')}</p>
+        <p className="product-description">{deskripsi}</p>
+      </div>
+      
+      <div className="product-interaction">
+        <div className="quantity-selector">
+          <button 
+            onClick={decrement} 
+            disabled={count === 0}
+            className="quantity-btn"
+          >
+            −
+          </button>
+          <span className="quantity-count">{count}</span>
+          <button onClick={increment} className="quantity-btn">
+            +
+          </button>
         </div>
-        <button className="btn-beli" onClick={() => onBuy(nama)}>
+        
+        <button 
+          className="buy-button" 
+          onClick={() => onBuy(nama)}
+          disabled={count === 0}
+        >
           Beli Sekarang
         </button>
       </div>

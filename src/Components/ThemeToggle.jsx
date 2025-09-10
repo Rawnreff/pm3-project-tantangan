@@ -1,34 +1,20 @@
-// src/components/ThemeToggle.jsx
-import React, { useEffect, useState } from "react";
+import React from 'react';
 import './ThemeToggle.css';
 
-function getInitialTheme() {
-  if (typeof window !== 'undefined' && window.localStorage) {
-    const stored = localStorage.getItem("theme");
-    if (stored === "dark" || stored === "light") return stored;
-  }
-  return 'light'; // Default ke light jika tidak ada preferensi
-}
-
-const ThemeToggle = ({ onThemeChange }) => {
-  const [theme, setTheme] = useState(getInitialTheme);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem("theme", theme);
-    } catch (error) {
-      console.error("Failed to access localStorage:", error);
-    }
-    onThemeChange(theme);
-  }, [theme, onThemeChange]);
-
-  const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
-
-  const isDark = theme === 'dark';
-
+const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
-    <button onClick={toggle} className={`theme-toggle-btn ${isDark ? 'dark' : 'light'}`}>
-      {isDark ? "🌙 Dark" : "☀️ Light"}
+    <button 
+      onClick={toggleTheme} 
+      className={`theme-toggle ${theme}`}
+      aria-label="Toggle theme"
+    >
+      <span className="theme-icon">
+        {theme === "light" ? "🌙" : "☀️"}
+      </span>
+      <span className="theme-text">
+        {theme === "light" ? "Mode Gelap" : "Mode Terang"}
+      </span>
+      <span className="theme-slider"></span>
     </button>
   );
 };

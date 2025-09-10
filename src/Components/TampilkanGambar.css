@@ -1,24 +1,68 @@
-.gambar-section {
+/* TampilkanGambar.css */
+.image-display-container {
   text-align: center;
-  margin-top: 40px;
+  margin: 20px 0;
 }
 
-.btn-gambar {
-  background-color: #007bff;
+.image-toggle-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 12px 24px;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 30px;
   font-weight: 600;
   cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--box-shadow);
 }
 
-.gambar {
-  max-width: 100%;
+.image-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.image-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.displayed-image {
+  width: 100%;
+  max-width: 600px;
   height: auto;
-  margin-top: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  display: block;
+  border-radius: var(--border-radius);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .displayed-image {
+    max-width: 100%;
+  }
 }

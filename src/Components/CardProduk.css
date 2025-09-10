@@ -1,72 +1,113 @@
-.card-produk {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* src/components/CardProduk.css */
+.product-card {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
 }
 
-.card-produk:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-.produk-nama {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+.theme-dark .product-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.produk-harga {
-  font-size: 1.2rem;
+.product-content {
+  padding: 24px;
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #007bff;
   margin-bottom: 12px;
+  color: var(--text-color);
 }
 
-.produk-deskripsi {
-  font-size: 0.9rem;
-  color: #6c757d;
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.product-description {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.produk-interaksi {
+.product-interaction {
+  padding: 0 24px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
 }
 
-.counter {
+.quantity-selector {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
-.counter button {
-  background: #e9ecef;
-  border: none;
-  width: 30px;
-  height: 30px;
+.quantity-btn {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: var(--transition);
 }
 
-.btn-beli {
-  background-color: #007bff;
+.quantity-btn:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-count {
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+}
+
+.buy-button {
+  background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 12px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
+  transition: var(--transition);
+}
+
+.buy-button:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+}
+
+.buy-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

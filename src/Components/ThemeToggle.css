@@ -1,26 +1,75 @@
-.theme-toggle-btn {
-  background: none;
+/* ThemeToggle.css */
+.theme-toggle {
+  background: var(--bg-secondary);
   border: none;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  position: relative;
+  transition: var(--transition);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
-.theme-toggle-btn.light {
-  color: #555;
+.theme-dark .theme-toggle {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
-.theme-toggle-btn.light:hover {
-  background-color: #f0f0f0;
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.theme-toggle-btn.dark {
-  color: #f0f2f5;
+.theme-dark .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.theme-toggle-btn.dark:hover {
-  background-color: #444;
+.theme-icon {
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.theme-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.theme-slider {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ddd;
+  position: relative;
+  transition: var(--transition);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle.light .theme-slider::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  top: 2px;
+  left: 2px;
+  transition: var(--transition);
+}
+
+.theme-toggle.dark .theme-slider::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  top: 2px;
+  left: 22px;
+  transition: var(--transition);
+}
+
+.theme-toggle.dark .theme-slider {
+  background-color: #333;
 }

@@ -1,53 +1,129 @@
-.counter {
+/* Counter.css */
+.counter-widget {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 24px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+.counter-widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.theme-dark .counter-widget:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.counter-title {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.counter-display {
+  margin-bottom: 20px;
+}
+
+.counter-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: inline-block;
+  min-width: 80px;
+}
+
+.counter-controls {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 12px;
-  margin: 16px 0;
+  margin-bottom: 20px;
 }
-.counter .btn-increment {
-  background: #4caf50;
-  color: #fff;
+
+.counter-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 16px;
-  transition: background 0.2s ease;
-}
-
-.counter .btn-increment:hover {
-  background: #45a049;
-}
-
-.counter .btn-decrement {
-  background: #f44336;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
 }
 
-.counter .btn-decrement:hover {
-  background: #d32f2f;
-}
-
-.counter .btn-decrement:disabled {
-  background: #ccc;
+.counter-btn:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* Angka counter */
-.counter p {
-  margin: 0;
-  font-weight: bold;
-  font-size: 18px;
-  color: #333;
-  min-width: 28px;
-  text-align: center;
+.counter-btn.increment {
+  background-color: #4caf50;
+  color: white;
+}
+
+.counter-btn.increment:not(:disabled):hover {
+  background-color: #3d8b40;
+  transform: scale(1.1);
+}
+
+.counter-btn.decrement {
+  background-color: #f44336;
+  color: white;
+}
+
+.counter-btn.decrement:not(:disabled):hover {
+  background-color: #d32f2f;
+  transform: scale(1.1);
+}
+
+.counter-btn.reset {
+  background-color: #ff9800;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.counter-btn.reset:not(:disabled):hover {
+  background-color: #f57c00;
+  transform: scale(1.1);
+}
+
+.counter-actions {
+  margin-top: 15px;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.3);
+}
+
+.action-icon {
+  font-size: 1.2rem;
 }
