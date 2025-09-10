@@ -1,14 +1,13 @@
-import "./Testimoni.css";
+import React from 'react';
+import './Testimoni.css';
 
-function Testimoni({ nama, isiTestimoni }) {
+const Testimoni = ({ nama, isiTestimoni }) => {
   return (
-    <div className="testimoni">
-      <blockquote className="quote-box">
-        <p className="isi-testimoni">"{isiTestimoni}"</p>
-      </blockquote>
-      <p className="nama-testimoni">- {nama}</p>
+    <div className="testimoni-card">
+      <p className="testimoni-text">"{isiTestimoni}"</p>
+      <p className="testimoni-nama">- {nama}</p>
     </div>
   );
-}
+};
 
 export default Testimoni;

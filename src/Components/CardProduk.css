@@ -1,57 +1,72 @@
-/* CardProduk.css */
 .card-produk {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 280px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  width: 300px;
   text-align: center;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-produk:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card-produk h2 {
-  font-size: 1.4rem;
-  color: #333;
+.produk-nama {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.card-produk .harga {
+.produk-harga {
   font-size: 1.2rem;
-  color: #4CAF50;
-  font-weight: bold;
-  margin: 10px 0;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 12px;
 }
 
-.card-produk .deskripsi {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 15px;
-  min-height: 40px;
+.produk-deskripsi {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 20px;
 }
 
-.card-produk .btn-beli {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.card-produk .btn-beli:hover {
-  background: #0056b3;
+.produk-interaksi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .counter {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin: 12px 0;
+  gap: 10px;
+}
+
+.counter button {
+  background: #e9ecef;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-beli {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
 }

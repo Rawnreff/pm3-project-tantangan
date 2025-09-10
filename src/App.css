@@ -1,49 +1,63 @@
-  /* App.css */
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  .container {
-    width: 100%;
-    margin: 0 auto; 
-    min-height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
-  }
+.theme-light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    text-align: center;
-  }
+.theme-dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
-  .intro-text {
-    font-size: 1.1rem;
-    color: #666;
-    text-align: center;
-    max-width: 600px;
-    margin-bottom: 40px;
-  }
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .produk-list,
-  .testimoni-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-  }
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+}
 
-  .testimoni-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin: 0 0 20px 0;
-    text-align: center;
-  }
+.content-container {
+  text-align: center;
+}
+
+.content-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.testimoni-section {
+  margin-top: 60px;
+}
+
+.testimoni-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
