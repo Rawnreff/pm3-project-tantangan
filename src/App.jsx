@@ -154,7 +154,7 @@ const App = () => {
           <div className="footer-section">
             <h4>Kontak</h4>
             <p>Email: info@zzzhop.com</p>
-            <p>Telepon: (021) 1234-5678</p>
+            <p>Telepon: (62) 123-4567-8910</p>
           </div>
         </div>
         <div className="footer-bottom">
