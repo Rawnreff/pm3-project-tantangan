@@ -103,15 +103,15 @@ const App = () => {
                 <h2 className="section-title">Apa Kata Pelanggan Kami?</h2>
                 <div className="testimoni-grid">
                   <Testimoni 
-                    nama="Sarah A." 
+                    nama="Sarah A. Seek" 
                     isiTestimoni="Pengiriman super cepat dan produknya sesuai deskripsi. Sangat puas!" 
                   />
                   <Testimoni 
-                    nama="Bima P." 
+                    nama="Tako P." 
                     isiTestimoni="Website mudah digunakan, dan pilihan produknya sangat beragam. Rekomendasi!" 
                   />
                   <Testimoni 
-                    nama="Citra D." 
+                    nama="Zhafif D. Roger" 
                     isiTestimoni="Layanan pelanggan responsif. Pengalaman belanja yang menyenangkan." 
                   />
                 </div>
