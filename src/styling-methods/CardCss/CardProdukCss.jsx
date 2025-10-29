@@ -1,5 +1,3 @@
-// src/styling-methods/CardCss/CardProdukCss.jsx
-// METODE 1: Menggunakan External CSS File
 import React, { useState } from 'react';
 import './CardProdukCss.css';
 

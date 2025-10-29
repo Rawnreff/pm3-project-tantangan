@@ -1,6 +1,3 @@
-/* src/styling-methods/CardModule/CardProdukModule.module.css */
-/* METODE 2: CSS Modules - Class names di-scope secara lokal */
-
 .productCard {
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
@@ -134,16 +131,3 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
-
-/* KELEBIHAN:
- * - Scoped CSS - tidak ada konflik nama class
- * - Class names unik otomatis (hash)
- * - Lebih maintainable untuk project besar
- * - Type-safe dengan TypeScript
- * 
- * KEKURANGAN:
- * - Syntax agak berbeda (camelCase untuk class names)
- * - Perlu menggunakan :global() untuk selector global
- * - Sedikit lebih kompleks untuk pemula
- */
-

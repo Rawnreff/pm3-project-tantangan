@@ -1,5 +1,3 @@
-// src/styling-methods/CardInline/CardProdukInline.jsx
-// METODE 3: Menggunakan Inline Styling
 import React, { useState, useEffect } from 'react';
 
 const CardProdukInline = ({ nama, harga, deskripsi, onBuy }) => {
@@ -7,7 +5,6 @@ const CardProdukInline = ({ nama, harga, deskripsi, onBuy }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [theme, setTheme] = useState('light');
 
-  // Detect theme from parent
   useEffect(() => {
     const appElement = document.querySelector('.app');
     if (appElement) {
@@ -21,7 +18,6 @@ const CardProdukInline = ({ nama, harga, deskripsi, onBuy }) => {
     if (count > 0) setCount(count - 1);
   };
 
-  // Inline Styles - Semua styling didefinisikan sebagai objek JavaScript
   const styles = {
     productCard: {
       backgroundColor: theme === 'dark' 
@@ -192,21 +188,3 @@ const CardProdukInline = ({ nama, harga, deskripsi, onBuy }) => {
     </div>
   );
 };
-
-export default CardProdukInline;
-
-/* KELEBIHAN:
- * - Tidak perlu file CSS terpisah
- * - Style scoped ke komponen (tidak ada konflik)
- * - Dynamic styling mudah (conditional styling)
- * - Mudah untuk komponen kecil
- * 
- * KEKURANGAN:
- * - Tidak ada auto-complete CSS
- * - Tidak bisa menggunakan pseudo-classes (:hover, :active) dengan mudah
- * - Perlu state management untuk hover effects
- * - File JSX menjadi sangat panjang dan sulit dibaca
- * - Tidak ada media queries
- * - Performance bisa lebih lambat (re-create object setiap render)
- */
-

@@ -1,6 +1,3 @@
-/* src/styling-methods/CardCss/CardProdukCss.css */
-/* METODE 1: External CSS File - Styling terpisah dari komponen */
-
 .product-card-css {
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
@@ -129,15 +126,3 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
-
-/* KELEBIHAN:
- * - Mudah dibaca dan diorganisir
- * - Dapat menggunakan CSS preprocessor (SASS, LESS)
- * - Mudah untuk styling kompleks dan media queries
- * - Dapat di-cache oleh browser
- * 
- * KEKURANGAN:
- * - Risiko konflik nama class (namespace pollution)
- * - Perlu penamaan yang hati-hati
- * - File terpisah membuat debugging lebih sulit
- */

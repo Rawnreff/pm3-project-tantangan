@@ -1,5 +1,3 @@
-// src/styling-methods/StylingDemo.jsx
-// Demo untuk membandingkan ketiga metode styling
 import React, { useState } from 'react';
 import CardProdukCss from './CardCss/CardProdukCss';
 import CardProdukModule from './CardModule/CardProdukModule';
@@ -129,7 +127,7 @@ const StylingDemo = () => {
   return (
     <div style={demoStyles.container}>
       <div style={demoStyles.header}>
-        <h1 style={demoStyles.title}>🎨 Perbandingan Metode Styling React</h1>
+        <h1 style={demoStyles.title}>Perbandingan Metode Styling React</h1>
         <p style={demoStyles.subtitle}>
           Eksperimen dengan tiga metode styling berbeda menggunakan komponen yang sama
         </p>
@@ -141,7 +139,7 @@ const StylingDemo = () => {
           <span style={{...demoStyles.badge, ...demoStyles.badgeCss}}>
             Metode 1
           </span>
-          <h2 style={demoStyles.methodTitle}>📄 External CSS</h2>
+          <h2 style={demoStyles.methodTitle}> External CSS</h2>
           <p style={demoStyles.methodDescription}>
             Menggunakan file CSS terpisah (.css). Styling tradisional dengan class names.
           </p>
@@ -158,7 +156,7 @@ const StylingDemo = () => {
           <span style={{...demoStyles.badge, ...demoStyles.badgeModule}}>
             Metode 2
           </span>
-          <h2 style={demoStyles.methodTitle}>🔒 CSS Modules</h2>
+          <h2 style={demoStyles.methodTitle}>CSS Modules</h2>
           <p style={demoStyles.methodDescription}>
             Menggunakan CSS Modules (.module.css). Class names di-scope secara lokal.
           </p>
@@ -175,7 +173,7 @@ const StylingDemo = () => {
           <span style={{...demoStyles.badge, ...demoStyles.badgeInline}}>
             Metode 3
           </span>
-          <h2 style={demoStyles.methodTitle}>✨ Inline Styling</h2>
+          <h2 style={demoStyles.methodTitle}>Inline Styling</h2>
           <p style={demoStyles.methodDescription}>
             Menggunakan style object di JSX. Dynamic styling dengan JavaScript.
           </p>
@@ -190,7 +188,7 @@ const StylingDemo = () => {
 
       {/* Comparison Table */}
       <div style={demoStyles.comparisonTable}>
-        <h2 style={demoStyles.tableTitle}>📊 Tabel Perbandingan</h2>
+        <h2 style={demoStyles.tableTitle}>Tabel Perbandingan</h2>
         <table style={demoStyles.table}>
           <thead>
             <tr>

@@ -1,5 +1,3 @@
-// src/styling-methods/CardModule/CardProdukModule.jsx
-// METODE 2: Menggunakan CSS Modules
 import React, { useState } from 'react';
 import styles from './CardProdukModule.module.css';
 

@@ -2,7 +2,6 @@ import React from 'react';
 import './Testimoni.css';
 
 const Testimoni = ({ nama, isiTestimoni, rating = 5 }) => {
-  // Render bintang rating
   const renderRating = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <span 
