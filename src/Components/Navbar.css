@@ -5,13 +5,14 @@
   left: 0;
   right: 0;
   background-color: var(--bg-light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   z-index: 100;
   transition: var(--transition);
+  backdrop-filter: blur(10px);
 }
 
 .theme-dark .navbar {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {

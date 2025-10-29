@@ -5,6 +5,7 @@ import CardProduk from './components/CardProduk';
 import ContactForm from './components/ContactForm';
 import TampilkanGambar from './components/TampilkanGambar';
 import Testimoni from './components/Testimoni';
+import StylingDemo from './styling-methods/StylingDemo';
 import produkData from './data/produkData';
 import './App.css';
 
@@ -119,6 +120,8 @@ const App = () => {
             </section>
           </div>
         );
+      case "Styling":
+        return <StylingDemo />;
       default:
         return <p>Halaman tidak ditemukan.</p>;
     }
@@ -149,6 +152,7 @@ const App = () => {
               <li><button onClick={() => setHalamanAktif("Home")}>Home</button></li>
               <li><button onClick={() => setHalamanAktif("Tentang")}>Tentang</button></li>
               <li><button onClick={() => setHalamanAktif("Kontak")}>Kontak</button></li>
+              <li><button onClick={() => setHalamanAktif("Styling")}>Styling Demo</button></li>
             </ul>
           </div>
           <div className="footer-section">

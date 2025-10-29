@@ -1,7 +1,7 @@
 /* ThemeToggle.css */
 .theme-toggle {
   background: var(--bg-secondary);
-  border: none;
+  border: 1px solid var(--border-color);
   border-radius: 30px;
   padding: 8px 16px;
   display: inline-flex;
@@ -10,19 +10,11 @@
   cursor: pointer;
   position: relative;
   transition: var(--transition);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-}
-
-.theme-dark .theme-toggle {
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.theme-dark .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--bg-tertiary);
+  transform: translateY(-1px);
 }
 
 .theme-icon {
@@ -40,10 +32,10 @@
   width: 40px;
   height: 20px;
   border-radius: 20px;
-  background-color: #ddd;
+  background-color: var(--bg-tertiary);
   position: relative;
   transition: var(--transition);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .theme-toggle.light .theme-slider::after {
@@ -71,5 +63,9 @@
 }
 
 .theme-toggle.dark .theme-slider {
-  background-color: #333;
+  background-color: var(--primary-color);
+}
+
+.theme-toggle.light .theme-slider {
+  background-color: #e2e8f0;
 }

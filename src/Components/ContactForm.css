@@ -9,6 +9,11 @@
   box-shadow: var(--box-shadow);
   padding: 30px;
   margin-bottom: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.theme-dark .form-card {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
 }
 
 .form-title {
@@ -48,24 +53,29 @@
 
 .form-input, .form-textarea {
   padding: 12px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
   transition: var(--transition);
-  background-color: var(--bg-light);
+  background-color: var(--bg-secondary);
   color: var(--text-color);
 }
 
 .theme-dark .form-input,
 .theme-dark .form-textarea {
-  border-color: #444;
+  background-color: var(--bg-tertiary);
 }
 
 .form-input:focus, .form-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.theme-dark .form-input:focus, 
+.theme-dark .form-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
 }
 
 .form-textarea {
@@ -89,9 +99,17 @@
   align-self: flex-start;
 }
 
+.theme-dark .form-submit-btn {
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+}
+
 .form-submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(67, 97, 238, 0.3);
+}
+
+.theme-dark .form-submit-btn:hover {
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.5);
 }
 
 .messages-container {
@@ -99,6 +117,11 @@
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.theme-dark .messages-container {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
 }
 
 .messages-container h3 {

@@ -40,6 +40,14 @@ const Navbar = ({ halamanAktif, setHalamanAktif, onThemeChange, theme }) => {
               Kontak
             </button>
           </li>
+          <li className="nav-item">
+            <button 
+              onClick={() => setHalamanAktif("Styling")} 
+              className={halamanAktif === "Styling" ? "nav-link active" : "nav-link"}
+            >
+              Styling Demo
+            </button>
+          </li>
         </ul>
         
         <div className="nav-actions">

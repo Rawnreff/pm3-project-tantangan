@@ -1,5 +1,7 @@
-/* src/components/CardProduk.css */
-.product-card {
+/* src/styling-methods/CardModule/CardProdukModule.module.css */
+/* METODE 2: CSS Modules - Class names di-scope secara lokal */
+
+.productCard {
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -11,54 +13,58 @@
   border: 1px solid var(--border-color);
 }
 
-.theme-dark .product-card {
+.productCard:global(.theme-dark) {
   background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
 }
 
-.product-card:hover {
+:global(.theme-dark) .productCard {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
+}
+
+.productCard:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
 }
 
-.theme-dark .product-card:hover {
+:global(.theme-dark) .productCard:hover {
   border-color: var(--primary-color);
   box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
 }
 
-.product-content {
+.productContent {
   padding: 24px;
   flex: 1;
 }
 
-.product-name {
+.productName {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--text-color);
 }
 
-.product-price {
+.productPrice {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 15px;
 }
 
-.product-description {
+.productDescription {
   color: var(--text-color);
   opacity: 0.8;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.product-interaction {
+.productInteraction {
   padding: 0 24px 24px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.quantity-selector {
+.quantitySelector {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +72,7 @@
   margin-bottom: 10px;
 }
 
-.quantity-btn {
+.quantityBtn {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -81,24 +87,25 @@
   transition: var(--transition);
 }
 
-.quantity-btn:hover:not(:disabled) {
+.quantityBtn:hover:not(:disabled) {
   background-color: var(--primary-color);
   color: white;
 }
 
-.quantity-btn:disabled {
+.quantityBtn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.quantity-count {
+.quantityCount {
   font-size: 1.2rem;
   font-weight: 600;
   min-width: 30px;
   text-align: center;
+  color: var(--text-color);
 }
 
-.buy-button {
+.buyButton {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -109,21 +116,34 @@
   transition: var(--transition);
 }
 
-.theme-dark .buy-button {
+:global(.theme-dark) .buyButton {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
 }
 
-.buy-button:hover:not(:disabled) {
+.buyButton:hover:not(:disabled) {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-.theme-dark .buy-button:hover:not(:disabled) {
+:global(.theme-dark) .buyButton:hover:not(:disabled) {
   box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5);
 }
 
-.buy-button:disabled {
+.buyButton:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* KELEBIHAN:
+ * - Scoped CSS - tidak ada konflik nama class
+ * - Class names unik otomatis (hash)
+ * - Lebih maintainable untuk project besar
+ * - Type-safe dengan TypeScript
+ * 
+ * KEKURANGAN:
+ * - Syntax agak berbeda (camelCase untuk class names)
+ * - Perlu menggunakan :global() untuk selector global
+ * - Sedikit lebih kompleks untuk pemula
+ */
+

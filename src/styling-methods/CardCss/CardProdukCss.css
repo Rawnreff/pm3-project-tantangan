@@ -1,5 +1,7 @@
-/* src/components/CardProduk.css */
-.product-card {
+/* src/styling-methods/CardCss/CardProdukCss.css */
+/* METODE 1: External CSS File - Styling terpisah dari komponen */
+
+.product-card-css {
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -11,54 +13,54 @@
   border: 1px solid var(--border-color);
 }
 
-.theme-dark .product-card {
+.theme-dark .product-card-css {
   background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
 }
 
-.product-card:hover {
+.product-card-css:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
 }
 
-.theme-dark .product-card:hover {
+.theme-dark .product-card-css:hover {
   border-color: var(--primary-color);
   box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
 }
 
-.product-content {
+.product-content-css {
   padding: 24px;
   flex: 1;
 }
 
-.product-name {
+.product-name-css {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--text-color);
 }
 
-.product-price {
+.product-price-css {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 15px;
 }
 
-.product-description {
+.product-description-css {
   color: var(--text-color);
   opacity: 0.8;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.product-interaction {
+.product-interaction-css {
   padding: 0 24px 24px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.quantity-selector {
+.quantity-selector-css {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +68,7 @@
   margin-bottom: 10px;
 }
 
-.quantity-btn {
+.quantity-btn-css {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -81,24 +83,24 @@
   transition: var(--transition);
 }
 
-.quantity-btn:hover:not(:disabled) {
+.quantity-btn-css:hover:not(:disabled) {
   background-color: var(--primary-color);
   color: white;
 }
 
-.quantity-btn:disabled {
+.quantity-btn-css:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.quantity-count {
+.quantity-count-css {
   font-size: 1.2rem;
   font-weight: 600;
   min-width: 30px;
   text-align: center;
 }
 
-.buy-button {
+.buy-button-css {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -109,21 +111,33 @@
   transition: var(--transition);
 }
 
-.theme-dark .buy-button {
+.theme-dark .buy-button-css {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
 }
 
-.buy-button:hover:not(:disabled) {
+.buy-button-css:hover:not(:disabled) {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-.theme-dark .buy-button:hover:not(:disabled) {
+.theme-dark .buy-button-css:hover:not(:disabled) {
   box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5);
 }
 
-.buy-button:disabled {
+.buy-button-css:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* KELEBIHAN:
+ * - Mudah dibaca dan diorganisir
+ * - Dapat menggunakan CSS preprocessor (SASS, LESS)
+ * - Mudah untuk styling kompleks dan media queries
+ * - Dapat di-cache oleh browser
+ * 
+ * KEKURANGAN:
+ * - Risiko konflik nama class (namespace pollution)
+ * - Perlu penamaan yang hati-hati
+ * - File terpisah membuat debugging lebih sulit
+ */
