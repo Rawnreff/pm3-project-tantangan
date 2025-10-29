@@ -188,3 +188,5 @@ const CardProdukInline = ({ nama, harga, deskripsi, onBuy }) => {
     </div>
   );
 };
+
+export default CardProdukInline;
